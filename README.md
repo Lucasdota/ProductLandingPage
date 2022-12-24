@@ -1,2 +1,2 @@
 # ProductLandingPage
- A standard product landing page with a embedded video
+ A standard product landing page with an embedded video
