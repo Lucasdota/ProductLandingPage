@@ -1,26 +1,32 @@
 /*add all paddings and margins to the total sum of its elements*/
 *{
     box-sizing: border-box;
-    color:#FF8F71  #EEB5EB;
+    scroll-behavior: smooth;
 }
 
 
 body{
+    background-image: repeating-linear-gradient(90deg, hsla(352,0%,68%,0.09) 0px, hsla(352,0%,68%,0.09) 1px,transparent 1px, transparent 96px),repeating-linear-gradient(0deg, hsla(352,0%,68%,0.09) 0px, hsla(352,0%,68%,0.09) 1px,transparent 1px, transparent 96px),repeating-linear-gradient(0deg, hsla(352,0%,68%,0.09) 0px, hsla(352,0%,68%,0.09) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, hsla(352,0%,68%,0.09) 0px, hsla(352,0%,68%,0.09) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255));
     margin:0;
-    padding:15px 30px;
+    padding:15px 30px 0px 30px;
     width:100%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    font-family:Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 
 /*header section*/
 header{
+    background-color: #FF8F71;
     display:flex;
     justify-content: center;
     align-items: center;
     height:80px;
     width:100%;
     padding:10px 35px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .logo{
     display:flex;
@@ -34,7 +40,9 @@ header{
     height:55px;
 }
 .logo h1{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 10;
+    text-transform: uppercase;
 }
 nav{
     align-self: flex-end;
@@ -59,28 +67,24 @@ header a{
 
 
 
-/*big image section*/
+
 .big-image{
     width:100%;
     height:400px;
-}
-.big-image img{
-    width:100%;
-    height:100%;
     object-fit: cover;
 }
-.whitebg{
-    background-color:rgba(255,255,255, 75%);
-    position:absolute;
-    top:20%;
-    left:78%;
-    padding:20px;
-    border:1px solid #FF8F71;
-}
-.big-image h2{
+
+
+
+/*little form below big image*/
+.little-form h2{
     text-align: center;
+    text-transform: uppercase;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 10;
+    margin-bottom:10px;
 }
-.big-image label{
+.little-form label{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,18 +92,17 @@ header a{
 }
 #email{
     display: block;
-    margin-bottom:5px;
+    margin-bottom:10px;
+    width:250px;
     background-color: white;
-    border-color: #FF8F71;
 }
-.big-image button{
+.little-form button{
     background-color: white;
-    padding:10px 35px;
+    padding:8px 25px;
     border-radius: 20px;
-    border-color: #FF8F71;
     color:black;
 }
-/*end of big image section*/
+/*end of little form*/
 
 
 
@@ -111,8 +114,239 @@ main{
 
 /*features section*/
 #features{
+    width:100%;
+    margin:50px 0;
+}
+#features h2{
+    text-align: center;
+    font-size:2.5em;
+    text-decoration: underline;
+}
+.hundred{
+    font-style: italic;
+}
+#features img{
+    width:210px;
+    height:260px;
+    border-radius:2px;
+}
+.books{
+    display:grid;
+    grid-template: auto auto auto/ repeat(3, auto);
+}
+#first-symbol{
+    grid-row-start: 1;
+    grid-row-end:4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:3em;
+}
+#second-symbol{
+    grid-row-start: 1;
+    grid-row-end:4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:3em;
+}
+.container-grid-book{
+    grid-row-start: 1;
+    grid-row-end:3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width:640px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:3px;
+    margin: auto;
+}
+.container-grid-book img{
+    border:1px solid rgb(179, 177, 177);
+}
+#fifth-book{
+    border:none;
+}
+
+/*description section inside the features*/
+
+.description{
+    background-image: radial-gradient(circle at 69% 86%, rgba(165, 165, 165,0.06) 0%, rgba(165, 165, 165,0.06) 25%,rgba(193, 193, 193,0.06) 25%, rgba(193, 193, 193,0.06) 50%,rgba(221, 221, 221,0.06) 50%, rgba(221, 221, 221,0.06) 75%,rgba(249, 249, 249,0.06) 75%, rgba(249, 249, 249,0.06) 100%),radial-gradient(circle at 49% 76%, rgba(129, 129, 129,0.06) 0%, rgba(129, 129, 129,0.06) 25%,rgba(164, 164, 164,0.06) 25%, rgba(164, 164, 164,0.06) 50%,rgba(200, 200, 200,0.06) 50%, rgba(200, 200, 200,0.06) 75%,rgba(235, 235, 235,0.06) 75%, rgba(235, 235, 235,0.06) 100%),radial-gradient(circle at 22% 64%, rgba(173, 173, 173,0.06) 0%, rgba(173, 173, 173,0.06) 25%,rgba(119, 119, 119,0.06) 25%, rgba(119, 119, 119,0.06) 50%,rgba(64, 64, 64,0.06) 50%, rgba(64, 64, 64,0.06) 75%,rgba(10, 10, 10,0.06) 75%, rgba(10, 10, 10,0.06) 100%),linear-gradient(307deg, rgb(255,255,255),rgb(255,255,255));
+    width:70%;
+    margin:50px auto;
+    padding:50px 0;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    color:black;
+}
+.description div{
+    width:70%;
     margin:auto;
 }
+.fire{
+    display:grid;
+    grid-template: auto auto / auto auto;
+}
+.fire h3{
+    font-size:3.4em;
+    margin:20px 20px 20px 36px;
+    grid-row-start:1;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:2;
+}
+.fire h4{
+    align-self: flex-end;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.fire p{
+    align-self: flex-start;
+    margin-top:-20px;
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.truck{
+    display:grid;
+    grid-template: auto auto / auto auto;
+}
+.truck h3{
+    font-size:3.4em;
+    margin:20px;
+    grid-row-start:1;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:2;
+}
+.truck h4{
+    align-self: flex-end;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.truck p{
+    align-self: flex-start;
+    margin-top:-20px;
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.box{
+    display:grid;
+    grid-template: auto auto / auto auto;
+}
+.box h3{
+    font-size:3.4em;
+    margin:20px;
+    grid-row-start:1;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:2;
+}
+.box h4{
+    align-self: flex-end;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.box p{
+    align-self: flex-start;
+    margin-top:-20px;
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+/*end of features section*/
+
+
+
+/*how section(video)*/  
+#how{
+    text-align: center;
+    margin-bottom:50px;
+}
+/*end of how section(video)*/
+
+
+
+/*pricing section*/
+#pricing{
+    width:100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.packs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.packs div{
+    background-image: radial-gradient(circle at 69% 86%, rgba(165, 165, 165,0.06) 0%, rgba(165, 165, 165,0.06) 25%,rgba(193, 193, 193,0.06) 25%, rgba(193, 193, 193,0.06) 50%,rgba(221, 221, 221,0.06) 50%, rgba(221, 221, 221,0.06) 75%,rgba(249, 249, 249,0.06) 75%, rgba(249, 249, 249,0.06) 100%),radial-gradient(circle at 49% 76%, rgba(129, 129, 129,0.06) 0%, rgba(129, 129, 129,0.06) 25%,rgba(164, 164, 164,0.06) 25%, rgba(164, 164, 164,0.06) 50%,rgba(200, 200, 200,0.06) 50%, rgba(200, 200, 200,0.06) 75%,rgba(235, 235, 235,0.06) 75%, rgba(235, 235, 235,0.06) 100%),radial-gradient(circle at 22% 64%, rgba(173, 173, 173,0.06) 0%, rgba(173, 173, 173,0.06) 25%,rgba(119, 119, 119,0.06) 25%, rgba(119, 119, 119,0.06) 50%,rgba(64, 64, 64,0.06) 50%, rgba(64, 64, 64,0.06) 75%,rgba(10, 10, 10,0.06) 75%, rgba(10, 10, 10,0.06) 100%),linear-gradient(307deg, rgb(255,255,255),rgb(255,255,255));
+    width:25%;
+    padding-bottom:15px;
+    border-radius: 30px;
+}
+.packs h2{
+    text-decoration: underline;
+}
+.age{
+    font-size: 0.7em;
+    margin-top:-15px;
+}
+/*end of pricing section*/
+
+
+
+/*footer*/
+footer{
+    width:100%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:350px;
+    background-color: #FF8F71;
+}
+footer h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:2.5em;  
+}
+footer button{
+    background-color: white;
+    padding:20px 70px;
+    border-radius: 60px;
+    border:2px solid black;
+    color:black;
+    font-size:2em;
+}
+footer a{
+    text-decoration: none;
+    color:black;
+}
+/*end of footer*/
+
+
+
+@media all and (max-width:768px){
+    
+}
+
 
 
 
